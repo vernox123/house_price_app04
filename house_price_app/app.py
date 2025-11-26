@@ -30,6 +30,6 @@ input_df = pd.DataFrame([{
 }])
 
 if st.button('Predict'):
-    model = joblib.load('./models/best_model.pkl')
+    model = joblib.load('house_price_app/models')
     pred = model.predict(input_df)[0]
     st.success(f'Predicted price: {pred:,.3f}')
