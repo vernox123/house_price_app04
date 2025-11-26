@@ -1,6 +1,10 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
+st.write("Files:", os.listdir())
+st.write("Models folder:", os.listdir("models") if os.path.exists("models") else "No models folder")
+
 
 st.set_page_config(page_title='House Price Predictor', layout='centered')
 st.title('🏡 House Price Predictor (California)')
